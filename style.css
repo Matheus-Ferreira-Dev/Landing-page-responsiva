@@ -4,7 +4,7 @@
     --primary-color: #814096;
     --secondary-color: #f83292;
     --gradient: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    --gradient-hover:  linear-gradient(90deg, var(--secondary-color),  var(--primary-color));
+    --gradient-hover: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
 }
 
 * {
@@ -46,14 +46,14 @@ section {
     background: var(--gradient);
     font-size: 1.8rem;
     color: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     cursor: pointer;
     transition: all .3s ease-out;
 }
 
 .btn:hover {
- transform: scale(1.1);
- background: var(--gradient-hover);
+    transform: scale(1.1);
+    background: var(--gradient-hover);
 }
 
 .home {
@@ -67,13 +67,13 @@ section {
 }
 
 .home .content h1 {
-  font-size: 5.5rem;
-  text-transform: uppercase;
-  color: #333;
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    color: #333;
 }
 
 .home .content h1 span {
-color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .home .content p {
@@ -88,10 +88,13 @@ color: var(--secondary-color);
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0rem);
     }
-    50%{
+
+    50% {
         transform: translateY(-3.5rem);
     }
 }
