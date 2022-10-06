@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --primary-color: #814096;
+    --secondary-color: #f83292;
+    --gradient: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    --gradient-hover:  linear-gradient(90deg, var(--secondary-color),  var(--primary-color));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+}
+
+*::selection {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eee;
+}
+
+section {
+    min-height: 100vh;
+    padding: 0 9%;
+    /* margin: 0 auto; */
+    padding-top: 10rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.5rem 3.5rem;
+    margin-top: 1rem;
+    background: var(--gradient);
+    font-size: 1.8rem;
+    color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.btn:hover {
+ transform: scale(1.1);
+ background: var(--gradient-hover);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('images/home-bg-img.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .content h1 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.home .content h1 span {
+color: var(--secondary-color);
+}
+
+.home .content p {
+    font-size: 1.8rem;
+    color: rgb(54, 54, 54);
+    padding: 1rem 0;
+}
+
+.home .image img {
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 0 3%;
+        padding-top: 7.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-flow: column-reverse;
+        text-align: center;
+    }
+
+    .home .image img {
+        width: 100%;
+    }
+
+    .home .content h1 {
+        font-size: 3.6rem;
+    }
+
+    .home .content p {
+        font-size: 1.6rem;
+    }
+}

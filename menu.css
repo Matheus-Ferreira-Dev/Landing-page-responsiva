@@ -1,0 +1,106 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 3rem;
+    font-weight: 300;
+
+}
+
+header .logo span {
+    color: var(--secondary-color);
+}
+
+header .navbar a {
+    font-size: 1.9rem;
+    margin-left: 3.5rem;
+    color: #000;
+    transition: .2s linear;
+}
+
+header .navbar  a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+header input {
+display: none;
+}
+
+header label {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+   /* header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   } */
+   
+    header label {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 2rem;
+        width: 100%;
+        border-top: .1rem solid rgba((0,0,0.1));
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        background-color: #fff;
+        transform-origin: top;
+        transform: scaleY(0);
+        display: none;
+        transition: .3s linear;
+    }
+
+    header .navbar a {
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    header input:checked ~ .navbar {
+        transform: scaleY(1);
+        display: block; 
+    }
+
+    header input:checked ~ label::before {
+        content: 'X';
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
